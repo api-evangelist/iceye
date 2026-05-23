@@ -1,0 +1,131 @@
+aid: iceye
+name: ICEYE
+description: >-
+  ICEYE operates the world's largest constellation of small Synthetic Aperture
+  Radar (SAR) satellites, delivering all-weather day-and-night imagery down to
+  25 cm resolution across multiple modes. The ICEYE API Platform at
+  api.iceye.com exposes a Catalog API over an archive of 60,000+ SAR scenes
+  and a Tasking API that lets customers schedule the constellation up to 14
+  days in advance without a feasibility study or human-in-the-loop. A
+  companion Company API exposes account context. Beyond raw imagery, ICEYE
+  publishes natural catastrophe products - Flood Insights, Wildfire Insights,
+  and Hurricane Insights - used by insurance, government, banking, and
+  utilities customers, and ships Gen 4 ISR, ISR Cell, Connect, and Federate
+  sovereign mission systems for defense and intelligence.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - SAR
+  - Satellite Imagery
+  - Earth Observation
+  - Tasking
+  - Catalog
+  - Flood Monitoring
+  - Disaster Response
+  - Defense
+  - ISR
+  - Geospatial
+  - All-Weather
+url: https://raw.githubusercontent.com/api-evangelist/iceye/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.20'
+apis:
+  - aid: iceye:catalog
+    name: ICEYE Catalog API
+    description: >-
+      Search, list, purchase, and retrieve products from ICEYE's archive of
+      60,000+ SAR scenes. Endpoints cover catalog item search, listing,
+      purchase, and retrieval of purchased items for download.
+    humanURL: https://docs.iceye.com/constellation/api/1.0/
+    baseURL: https://api.iceye.com
+    tags:
+      - Catalog
+      - Search
+      - Archive
+      - SAR
+    properties:
+      - type: Documentation
+        url: https://docs.iceye.com/constellation/api/1.0/
+  - aid: iceye:tasking
+    name: ICEYE Tasking API
+    description: >-
+      Direct tasking interface to the ICEYE SAR constellation. Create tasks up
+      to 14 days in advance with no feasibility study, retrieve task status,
+      list tasks, cancel tasks, fetch task scenes, and price tasks - built for
+      machine-to-machine automation.
+    humanURL: https://docs.iceye.com/constellation/api/tasking/
+    baseURL: https://api.iceye.com
+    tags:
+      - Tasking
+      - SAR
+      - Constellation
+      - Automation
+    properties:
+      - type: Documentation
+        url: https://docs.iceye.com/constellation/api/tasking/
+  - aid: iceye:company
+    name: ICEYE Company API
+    description: >-
+      Account and company context API providing identity, entitlement, and
+      organizational metadata that frames Catalog and Tasking calls.
+    humanURL: https://docs.iceye.com/constellation/api/1.0/
+    baseURL: https://api.iceye.com
+    tags:
+      - Account
+      - Company
+      - Identity
+    properties:
+      - type: Documentation
+        url: https://docs.iceye.com/constellation/api/1.0/
+  - aid: iceye:platform
+    name: ICEYE Platform
+    description: >-
+      Web platform at platform.iceye.com for browsing catalog imagery,
+      submitting tasking orders, monitoring task status, and downloading
+      delivered SAR products through the same backend as the API Platform.
+    humanURL: https://platform.iceye.com/
+    baseURL: https://platform.iceye.com/
+    tags:
+      - Platform
+      - Web Console
+      - Tasking
+    properties:
+      - type: Documentation
+        url: https://platform.iceye.com/docs/tasking
+common:
+  - type: Website
+    url: https://www.iceye.com/
+  - type: SARData
+    url: https://www.iceye.com/sar-data
+  - type: SARDataAPI
+    url: https://www.iceye.com/sar-data/api
+  - type: Tasking
+    url: https://www.iceye.com/sar-data/tasking
+  - type: Documentation
+    url: https://docs.iceye.com/
+  - type: APIDocumentation
+    url: https://docs.iceye.com/constellation/api/1.0/
+  - type: Platform
+    url: https://platform.iceye.com/
+  - type: ProductDocuments
+    url: https://www.iceye.com/resources/product-documents
+  - type: FloodInsights
+    url: https://www.iceye.com/solutions/natural-catastrophe-insights/flood-insights
+  - type: WildfireInsights
+    url: https://www.iceye.com/solutions/natural-catastrophe-insights/wildfire-insights
+  - type: HurricaneInsights
+    url: https://www.iceye.com/solutions/natural-catastrophe-insights/hurricane-insights
+  - type: MissionSystems
+    url: https://www.iceye.com/government-and-defense/mission-systems
+  - type: Newsroom
+    url: https://www.iceye.com/newsroom
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/iceye-ltd/
+  - type: X
+    url: https://x.com/ICEYEfi
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
