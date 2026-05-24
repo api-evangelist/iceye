@@ -1,0 +1,175 @@
+openapi: 3.1.0
+info:
+  title: ICEYE Constellation API
+  description: |
+    ICEYE Constellation API spanning the Company, Tasking, and Catalog APIs
+    for managing contracts, requesting satellite imaging tasks, and browsing
+    or purchasing existing imagery.
+  version: "1.0"
+  contact:
+    name: ICEYE
+    url: https://docs.iceye.com/constellation/api/1.0/
+servers:
+  - url: https://api.iceye.com
+    description: Production
+security:
+  - apiKeyAuth: []
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key issued by ICEYE.
+paths:
+  /company/contracts:
+    get:
+      summary: List contracts
+      operationId: listContracts
+      responses:
+        "200":
+          description: A list of contracts
+  /company/contracts/{contractId}:
+    parameters:
+      - name: contractId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a contract
+      operationId: getContract
+      responses:
+        "200":
+          description: Contract details
+  /company/summary:
+    get:
+      summary: Get account summary
+      operationId: getCompanySummary
+      responses:
+        "200":
+          description: Account summary
+  /tasking/tasks:
+    get:
+      summary: List tasks
+      operationId: listTasks
+      responses:
+        "200":
+          description: A list of tasks
+    post:
+      summary: Create a tasking request
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "201":
+          description: Task created
+  /tasking/tasks/{taskId}:
+    parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a task
+      operationId: getTask
+      responses:
+        "200":
+          description: Task details
+  /tasking/tasks/{taskId}/cancel:
+    parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Cancel a task
+      operationId: cancelTask
+      responses:
+        "200":
+          description: Task cancelled
+  /tasking/tasks/{taskId}/scene:
+    parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get task scene
+      operationId: getTaskScene
+      responses:
+        "200":
+          description: Scene details
+  /tasking/price:
+    post:
+      summary: Get task price
+      operationId: getTaskPrice
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Price quote
+  /catalog/items:
+    get:
+      summary: List catalog items
+      operationId: listCatalogItems
+      responses:
+        "200":
+          description: A list of catalog items
+  /catalog/search:
+    post:
+      summary: Search catalog items
+      operationId: searchCatalog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Matching items
+  /catalog/purchase:
+    post:
+      summary: Purchase catalog item
+      operationId: purchaseCatalogItem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Purchase confirmation
+  /catalog/purchased:
+    get:
+      summary: List purchased items
+      operationId: listPurchasedItems
+      responses:
+        "200":
+          description: A list of purchased items
+  /catalog/purchased/{purchaseId}/products:
+    parameters:
+      - name: purchaseId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: List products for a purchased item
+      operationId: listPurchasedItemProducts
+      responses:
+        "200":
+          description: A list of products
