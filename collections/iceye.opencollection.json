@@ -1,0 +1,223 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ICEYE Constellation API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List contracts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/company/contracts"
+      },
+      "docs": "List contracts"
+    },
+    {
+      "info": {
+        "name": "Get a contract",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/company/contracts/:contractId",
+        "params": [
+          {
+            "name": "contractId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a contract"
+    },
+    {
+      "info": {
+        "name": "Get account summary",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/company/summary"
+      },
+      "docs": "Get account summary"
+    },
+    {
+      "info": {
+        "name": "List tasks",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/tasking/tasks"
+      },
+      "docs": "List tasks"
+    },
+    {
+      "info": {
+        "name": "Create a tasking request",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.iceye.com/tasking/tasks",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a tasking request"
+    },
+    {
+      "info": {
+        "name": "Get a task",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/tasking/tasks/:taskId",
+        "params": [
+          {
+            "name": "taskId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a task"
+    },
+    {
+      "info": {
+        "name": "Cancel a task",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.iceye.com/tasking/tasks/:taskId/cancel",
+        "params": [
+          {
+            "name": "taskId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Cancel a task"
+    },
+    {
+      "info": {
+        "name": "Get task scene",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/tasking/tasks/:taskId/scene",
+        "params": [
+          {
+            "name": "taskId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get task scene"
+    },
+    {
+      "info": {
+        "name": "Get task price",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.iceye.com/tasking/price",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Get task price"
+    },
+    {
+      "info": {
+        "name": "List catalog items",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/catalog/items"
+      },
+      "docs": "List catalog items"
+    },
+    {
+      "info": {
+        "name": "Search catalog items",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.iceye.com/catalog/search",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Search catalog items"
+    },
+    {
+      "info": {
+        "name": "Purchase catalog item",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.iceye.com/catalog/purchase",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Purchase catalog item"
+    },
+    {
+      "info": {
+        "name": "List purchased items",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/catalog/purchased"
+      },
+      "docs": "List purchased items"
+    },
+    {
+      "info": {
+        "name": "List products for a purchased item",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.iceye.com/catalog/purchased/:purchaseId/products",
+        "params": [
+          {
+            "name": "purchaseId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List products for a purchased item"
+    }
+  ],
+  "bundled": true
+}
