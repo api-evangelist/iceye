@@ -96,6 +96,12 @@ apis:
       - type: Documentation
         url: https://platform.iceye.com/docs/tasking
 common:
+  - type: VulnerabilityDisclosure
+    url: security/iceye-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/iceye-domain-security.yml
+  - type: Authentication
+    url: authentication/iceye-authentication.yml
   - type: Website
     url: https://www.iceye.com/
   - type: SARData
@@ -126,6 +132,8 @@ common:
     url: https://www.linkedin.com/company/iceye-ltd/
   - type: X
     url: https://x.com/ICEYEfi
+  - url: https://www.iceye.com/blog/rss.xml
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
