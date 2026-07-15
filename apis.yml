@@ -96,6 +96,8 @@ apis:
       - type: Documentation
         url: https://platform.iceye.com/docs/tasking
 common:
+  - type: AgenticAccess
+    url: agentic-access/iceye-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/iceye-vulnerability-disclosure.yml
   - type: DomainSecurity
