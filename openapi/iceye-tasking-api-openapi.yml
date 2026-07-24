@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+  title: ICEYE Constellation Catalog Tasking API
+  description: 'ICEYE Constellation API spanning the Company, Tasking, and Catalog APIs
+
+    for managing contracts, requesting satellite imaging tasks, and browsing
+
+    or purchasing existing imagery.
+
+    '
+  version: '1.0'
+  contact:
+    name: ICEYE
+    url: https://docs.iceye.com/constellation/api/1.0/
+servers:
+- url: https://api.iceye.com
+  description: Production
+security:
+- apiKeyAuth: []
+tags:
+- name: Tasking
+paths:
+  /tasking/tasks:
+    get:
+      summary: List tasks
+      operationId: listTasks
+      responses:
+        '200':
+          description: A list of tasks
+      tags:
+      - Tasking
+    post:
+      summary: Create a tasking request
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Task created
+      tags:
+      - Tasking
+  /tasking/tasks/{taskId}:
+    parameters:
+    - name: taskId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get a task
+      operationId: getTask
+      responses:
+        '200':
+          description: Task details
+      tags:
+      - Tasking
+  /tasking/tasks/{taskId}/cancel:
+    parameters:
+    - name: taskId
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      summary: Cancel a task
+      operationId: cancelTask
+      responses:
+        '200':
+          description: Task cancelled
+      tags:
+      - Tasking
+  /tasking/tasks/{taskId}/scene:
+    parameters:
+    - name: taskId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get task scene
+      operationId: getTaskScene
+      responses:
+        '200':
+          description: Scene details
+      tags:
+      - Tasking
+  /tasking/price:
+    post:
+      summary: Get task price
+      operationId: getTaskPrice
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Price quote
+      tags:
+      - Tasking
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key issued by ICEYE.

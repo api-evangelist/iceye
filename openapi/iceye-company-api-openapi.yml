@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: ICEYE Constellation Catalog Company API
+  description: 'ICEYE Constellation API spanning the Company, Tasking, and Catalog APIs
+
+    for managing contracts, requesting satellite imaging tasks, and browsing
+
+    or purchasing existing imagery.
+
+    '
+  version: '1.0'
+  contact:
+    name: ICEYE
+    url: https://docs.iceye.com/constellation/api/1.0/
+servers:
+- url: https://api.iceye.com
+  description: Production
+security:
+- apiKeyAuth: []
+tags:
+- name: Company
+paths:
+  /company/contracts:
+    get:
+      summary: List contracts
+      operationId: listContracts
+      responses:
+        '200':
+          description: A list of contracts
+      tags:
+      - Company
+  /company/contracts/{contractId}:
+    parameters:
+    - name: contractId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get a contract
+      operationId: getContract
+      responses:
+        '200':
+          description: Contract details
+      tags:
+      - Company
+  /company/summary:
+    get:
+      summary: Get account summary
+      operationId: getCompanySummary
+      responses:
+        '200':
+          description: Account summary
+      tags:
+      - Company
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key issued by ICEYE.
