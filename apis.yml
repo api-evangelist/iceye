@@ -13,9 +13,22 @@ description: >-
   utilities customers, and ships Gen 4 ISR, ISR Cell, Connect, and Federate
   sovereign mission systems for defense and intelligence.
 type: Index
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Provider
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/iceye.png
 tags:
   - SAR
   - Satellite Imagery
@@ -33,68 +46,95 @@ created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.20'
 apis:
-  - aid: iceye:catalog
-    name: ICEYE Catalog API
-    description: >-
-      Search, list, purchase, and retrieve products from ICEYE's archive of
-      60,000+ SAR scenes. Endpoints cover catalog item search, listing,
-      purchase, and retrieval of purchased items for download.
-    humanURL: https://docs.iceye.com/constellation/api/1.0/
-    baseURL: https://api.iceye.com
-    tags:
-      - Catalog
-      - Search
-      - Archive
-      - SAR
-    properties:
-      - type: Documentation
-        url: https://docs.iceye.com/constellation/api/1.0/
-  - aid: iceye:tasking
-    name: ICEYE Tasking API
-    description: >-
-      Direct tasking interface to the ICEYE SAR constellation. Create tasks up
-      to 14 days in advance with no feasibility study, retrieve task status,
-      list tasks, cancel tasks, fetch task scenes, and price tasks - built for
-      machine-to-machine automation.
-    humanURL: https://docs.iceye.com/constellation/api/tasking/
-    baseURL: https://api.iceye.com
-    tags:
-      - Tasking
-      - SAR
-      - Constellation
-      - Automation
-    properties:
-      - type: Documentation
-        url: https://docs.iceye.com/constellation/api/tasking/
-  - aid: iceye:company
-    name: ICEYE Company API
-    description: >-
-      Account and company context API providing identity, entitlement, and
-      organizational metadata that frames Catalog and Tasking calls.
-    humanURL: https://docs.iceye.com/constellation/api/1.0/
-    baseURL: https://api.iceye.com
-    tags:
-      - Account
-      - Company
-      - Identity
-    properties:
-      - type: Documentation
-        url: https://docs.iceye.com/constellation/api/1.0/
-  - aid: iceye:platform
-    name: ICEYE Platform
-    description: >-
-      Web platform at platform.iceye.com for browsing catalog imagery,
-      submitting tasking orders, monitoring task status, and downloading
-      delivered SAR products through the same backend as the API Platform.
-    humanURL: https://platform.iceye.com/
-    baseURL: https://platform.iceye.com/
-    tags:
-      - Platform
-      - Web Console
-      - Tasking
-    properties:
-      - type: Documentation
-        url: https://platform.iceye.com/docs/tasking
+- aid: iceye:catalog
+  name: ICEYE Catalog API
+  description: >-
+    Search, list, purchase, and retrieve products from ICEYE's archive of 60,000+ SAR scenes. Endpoints
+    cover catalog item search, listing, purchase, and retrieval of purchased items for download.
+  humanURL: https://docs.iceye.com/constellation/api/1.0/
+  baseURL: https://api.iceye.com
+  tags:
+  - Catalog
+  - Search
+  - Archive
+  - SAR
+  properties:
+  - type: Documentation
+    url: https://docs.iceye.com/constellation/api/1.0/
+- aid: iceye:tasking
+  name: ICEYE Tasking API
+  description: >-
+    Direct tasking interface to the ICEYE SAR constellation. Create tasks up to 14 days in advance with
+    no feasibility study, retrieve task status, list tasks, cancel tasks, fetch task scenes, and price
+    tasks - built for machine-to-machine automation.
+  humanURL: https://docs.iceye.com/constellation/api/tasking/
+  baseURL: https://api.iceye.com
+  tags:
+  - Tasking
+  - SAR
+  - Constellation
+  - Automation
+  properties:
+  - type: Documentation
+    url: https://docs.iceye.com/constellation/api/tasking/
+- aid: iceye:company
+  name: ICEYE Company API
+  description: >-
+    Account and company context API providing identity, entitlement, and organizational metadata that
+    frames Catalog and Tasking calls.
+  humanURL: https://docs.iceye.com/constellation/api/1.0/
+  baseURL: https://api.iceye.com
+  tags:
+  - Account
+  - Company
+  - Identity
+  properties:
+  - type: Documentation
+    url: https://docs.iceye.com/constellation/api/1.0/
+- aid: iceye:platform
+  name: ICEYE Platform
+  description: >-
+    Web platform at platform.iceye.com for browsing catalog imagery, submitting tasking orders, monitoring
+    task status, and downloading delivered SAR products through the same backend as the API Platform.
+  humanURL: https://platform.iceye.com/
+  baseURL: https://platform.iceye.com/
+  tags:
+  - Platform
+  - Web Console
+  - Tasking
+  properties:
+  - type: Documentation
+    url: https://platform.iceye.com/docs/tasking
+- aid: iceye:iceye-catalog-api
+  name: ICEYE Catalog API
+  description: The Catalog API from ICEYE — 5 operation(s) for catalog.
+  humanURL: https://docs.iceye.com/constellation/api/1.0/
+  baseURL: https://api.iceye.com
+  tags:
+  - Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/iceye-catalog-api-openapi.yml
+- aid: iceye:iceye-company-api
+  name: ICEYE Company API
+  description: The Company API from ICEYE — 3 operation(s) for company.
+  humanURL: https://docs.iceye.com/constellation/api/1.0/
+  baseURL: https://api.iceye.com
+  tags:
+  - Company
+  properties:
+  - type: OpenAPI
+    url: openapi/iceye-company-api-openapi.yml
+- aid: iceye:iceye-tasking-api
+  name: ICEYE Tasking API
+  description: The Tasking API from ICEYE — 5 operation(s) for tasking.
+  humanURL: https://docs.iceye.com/constellation/api/1.0/
+  baseURL: https://api.iceye.com
+  tags:
+  - Tasking
+  properties:
+  - type: OpenAPI
+    url: openapi/iceye-tasking-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/iceye-agentic-access.yml
