@@ -1,0 +1,18 @@
+{
+  "provider": "iceye",
+  "sources": [
+    "iceye-catalog-api-openapi.yml",
+    "iceye-company-api-openapi.yml",
+    "iceye-tasking-api-openapi.yml"
+  ],
+  "outputs": [
+    "iceye-catalog-api-openapi.yml",
+    "iceye-company-api-openapi.yml",
+    "iceye-tasking-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
