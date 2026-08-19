@@ -1,0 +1,96 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ICEYE Constellation Catalog API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Catalog",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List catalog items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/catalog/items"
+          },
+          "docs": "List catalog items"
+        },
+        {
+          "info": {
+            "name": "Search catalog items",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.iceye.com/catalog/search",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search catalog items"
+        },
+        {
+          "info": {
+            "name": "Purchase catalog item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.iceye.com/catalog/purchase",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Purchase catalog item"
+        },
+        {
+          "info": {
+            "name": "List purchased items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/catalog/purchased"
+          },
+          "docs": "List purchased items"
+        },
+        {
+          "info": {
+            "name": "List products for a purchased item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/catalog/purchased/:purchaseId/products",
+            "params": [
+              {
+                "name": "purchaseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List products for a purchased item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

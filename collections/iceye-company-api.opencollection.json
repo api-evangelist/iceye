@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ICEYE Constellation Catalog Company API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Company",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List contracts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/company/contracts"
+          },
+          "docs": "List contracts"
+        },
+        {
+          "info": {
+            "name": "Get a contract",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/company/contracts/:contractId",
+            "params": [
+              {
+                "name": "contractId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a contract"
+        },
+        {
+          "info": {
+            "name": "Get account summary",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/company/summary"
+          },
+          "docs": "Get account summary"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

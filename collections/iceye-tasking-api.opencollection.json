@@ -1,0 +1,121 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ICEYE Constellation Catalog Tasking API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tasking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tasks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/tasking/tasks"
+          },
+          "docs": "List tasks"
+        },
+        {
+          "info": {
+            "name": "Create a tasking request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.iceye.com/tasking/tasks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a tasking request"
+        },
+        {
+          "info": {
+            "name": "Get a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/tasking/tasks/:taskId",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a task"
+        },
+        {
+          "info": {
+            "name": "Cancel a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.iceye.com/tasking/tasks/:taskId/cancel",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Cancel a task"
+        },
+        {
+          "info": {
+            "name": "Get task scene",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.iceye.com/tasking/tasks/:taskId/scene",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get task scene"
+        },
+        {
+          "info": {
+            "name": "Get task price",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.iceye.com/tasking/price",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get task price"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
