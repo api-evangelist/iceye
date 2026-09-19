@@ -68,6 +68,11 @@ apis:
   tags:
   - Catalog
   - Search
+  - Archives
+  - SAR
+  tags_raw:
+  - Catalog
+  - Search
   - Archive
   - SAR
   properties:
