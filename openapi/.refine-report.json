@@ -1,9 +1,7 @@
 {
   "provider": "iceye",
   "sources": [
-    "iceye-catalog-api-openapi.yml",
-    "iceye-company-api-openapi.yml",
-    "iceye-tasking-api-openapi.yml"
+    "_original/iceye-openapi.yml"
   ],
   "outputs": [
     "iceye-catalog-api-openapi.yml",
@@ -13,6 +11,31 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "iceye-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "iceye-openapi.yml: tagged paths GET /company/contracts -> Company",
+    "iceye-openapi.yml: tagged paths GET /company/contracts/{contractId} -> Company",
+    "iceye-openapi.yml: tagged paths GET /company/summary -> Company",
+    "iceye-openapi.yml: tagged paths GET /tasking/tasks -> Tasking",
+    "iceye-openapi.yml: tagged paths POST /tasking/tasks -> Tasking",
+    "iceye-openapi.yml: tagged paths GET /tasking/tasks/{taskId} -> Tasking",
+    "iceye-openapi.yml: tagged paths POST /tasking/tasks/{taskId}/cancel -> Tasking",
+    "iceye-openapi.yml: tagged paths GET /tasking/tasks/{taskId}/scene -> Tasking",
+    "iceye-openapi.yml: tagged paths POST /tasking/price -> Tasking",
+    "iceye-openapi.yml: tagged paths GET /catalog/items -> Catalog",
+    "iceye-openapi.yml: tagged paths POST /catalog/search -> Catalog",
+    "iceye-openapi.yml: tagged paths POST /catalog/purchase -> Catalog",
+    "iceye-openapi.yml: tagged paths GET /catalog/purchased -> Catalog",
+    "iceye-openapi.yml: tagged paths GET /catalog/purchased/{purchaseId}/products -> Catalog",
+    "iceye-openapi.yml: declared missing tag: Catalog",
+    "iceye-openapi.yml: declared missing tag: Company",
+    "iceye-openapi.yml: declared missing tag: Tasking",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "iceye-catalog-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "iceye-company-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "iceye-tasking-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
