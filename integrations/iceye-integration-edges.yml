@@ -1,0 +1,80 @@
+edges:
+- partner_name: FCC Space Station Authorizations (Part 25)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.fcc.gov/approved-space-station-list
+  category: FCC-authorised space station operator
+  contract_reference:
+    register: FCC Approved Space Station List (fcc.gov/approved-space-station-list, ssal.xlsx; IBFS/ICFS is the
+      official database)
+    standard: FCC Part 25
+    spec_file: null
+    role: fcc-space-station-licensee
+    registered_name: ICEYE US, Inc.
+    register_id: https://www.fcc.gov/sites/default/files/ssal.xlsx
+    matched_domain: iceye.com
+    matched_by: domain
+    domain_source: wikidata:wikidata Q31086161 'ICEYE' P856 https://www.iceye.com
+    authorisations:
+    - US licence
+    administrations:
+    - U.S.A
+    - U.S.A.
+    space_stations:
+    - ICEYE SECOND TRANCHE
+    - ICEYE US
+    - Third Tranche
+    certified_products:
+    - product: 'FCC space station authorisation: EESS'
+      service: EESS
+      lapsed: false
+    signal_note: certified_products = one per SERVICE TYPE authorised (the licence / market-access grant is the
+      certification); satellites, call signs and orbital slots are context, never counted. The list carries current
+      authorisations only (lapsed false)
+    detected_by: sweep-space-satellite.py
+    detected: '2026-10-20'
+    identity_source: 'wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1): wikidata Q31086161 ''ICEYE''
+      P856 https://www.iceye.com'
+  detected_by: sweep-space-satellite.py
+  first_seen: '2026-10-20'
+- partner_name: Registry of Open Data on AWS
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.opendata.aws/iceye-opendata/
+  category: public earth-observation data register
+  contract_reference:
+    register: Registry of Open Data on AWS (registry.opendata.aws; source github.com/awslabs/open-data-registry)
+    standard: null
+    spec_file: null
+    role: aws-open-data-manager
+    registered_name: ICEYE
+    register_id: https://registry.opendata.aws/iceye-opendata/
+    matched_domain: iceye.com
+    matched_by: domain
+    domain_source: ManagedBy link
+    datasets:
+    - iceye-opendata
+    signal_note: 'participation only: manages earth-observation datasets listed on the registry; datasets are context,
+      never counted'
+    detected_by: sweep-space-satellite.py
+    detected: '2026-10-20'
+  detected_by: sweep-space-satellite.py
+  first_seen: '2026-10-20'
+generated: '2026-10-20'
+method: searched
+source:
+- https://www.fcc.gov/sites/default/files/ssal.xlsx
+- https://stacindex.org/api/catalogs
+- https://registry.opendata.aws/
+checked:
+- https://registry.opendata.aws/
+- https://stacindex.org/api/catalogs
+- https://www.fcc.gov/sites/default/files/ssal.xlsx
