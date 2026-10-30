@@ -1,4 +1,4 @@
-# ICEYE (iceye)
+# ICEYE
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,132 +66,124 @@
 
 ICEYE operates the world's largest constellation of small Synthetic Aperture Radar (SAR) satellites, delivering all-weather day-and-night imagery down to 25 cm resolution across multiple modes. The ICEYE API Platform at api.iceye.com exposes a Catalog API over an archive of 60,000+ SAR scenes and a Tasking API that lets customers schedule the constellation up to 14 days in advance without a feasibility study or human-in-the-loop. A companion Company API exposes account context. Beyond raw imagery, ICEYE publishes natural catastrophe products - Flood Insights, Wildfire Insights, and Hurricane Insights - used by insurance, government, banking, and utilities customers, and ships Gen 4 ISR, ISR Cell, Connect, and Federate sovereign mission systems for defense and intelligence.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/iceye/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/iceye/refs/heads/main/apis.yml)
+**Areas:** SAR · Satellite Imagery · Earth Observation · Tasking · Catalog · Flood Monitoring · Disaster Response · Defense · ISR · Geospatial · All-Weather · Remote Sensing
 
-## Scope
+## ICEYE on APIs.io
 
-- **Type:** Index
-- **Position:** Provider
-- **Access:** 3rd-Party
+Everything profiled for ICEYE is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/iceye/](https://apis.io/providers/iceye/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- SAR
-- Satellite Imagery
-- Earth Observation
-- Tasking
-- Catalog
-- Flood Monitoring
-- Disaster Response
-- Defense
-- ISR
-- Geospatial
-- All-Weather
+- [ICEYE Catalog API](https://apis.io/apis/iceye/catalog/) — Search, list, purchase, and retrieve products from ICEYE's archive of 60,000+ SAR scenes. Endpoints cover catalog item search, listing, purchase, and…
+- [ICEYE Tasking API](https://apis.io/apis/iceye/tasking/) — Direct tasking interface to the ICEYE SAR constellation. Create tasks up to 14 days in advance with no feasibility study, retrieve task status, list tasks,…
+- [ICEYE Company API](https://apis.io/apis/iceye/company/) — Account and company context API providing identity, entitlement, and organizational metadata that frames Catalog and Tasking calls.
+- [ICEYE Platform](https://apis.io/apis/iceye/platform/) — Web platform at platform.iceye.com for browsing catalog imagery, submitting tasking orders, monitoring task status, and downloading delivered SAR products…
+- [ICEYE Catalog API](https://apis.io/apis/iceye/iceye-catalog-api/) — The Catalog API from ICEYE — 5 operation(s) for catalog.
+- [ICEYE Company API](https://apis.io/apis/iceye/iceye-company-api/) — The Company API from ICEYE — 3 operation(s) for company.
+- [ICEYE Tasking API](https://apis.io/apis/iceye/iceye-tasking-api/) — The Tasking API from ICEYE — 5 operation(s) for tasking.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### ICEYE Catalog API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Search, list, purchase, and retrieve products from ICEYE's archive of 60,000+ SAR scenes. Endpoints cover catalog item search, listing, purchase, and retrieval of purchased items for download.
+- [Iceye Agentic Access](https://apis.io/agentic-access/iceye/iceye-agentic-access/)
 
-- **Human URL:** [https://docs.iceye.com/constellation/api/1.0/](https://docs.iceye.com/constellation/api/1.0/)
-- **Base URL:** `https://api.iceye.com`
+#### Collections (4)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Catalog
-- Search
-- Archive
-- SAR
+- [ICEYE Constellation API](https://apis.io/collections/iceye/open-iceye/)
+- [ICEYE Constellation Catalog API](https://apis.io/collections/iceye/open-iceye-catalog-api/)
+- [ICEYE Constellation Catalog Company API](https://apis.io/collections/iceye/open-iceye-company-api/)
+- [ICEYE Constellation Catalog Tasking API](https://apis.io/collections/iceye/open-iceye-tasking-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://docs.iceye.com/constellation/api/1.0/)
-- [Postman Collection](collections/iceye.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/iceye.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### ICEYE Tasking API
+- [Iceye Authentication](https://apis.io/security/iceye/iceye-authentication/)
+- [Iceye Domain Security](https://apis.io/security/iceye/iceye-domain-security/)
+- [Iceye Vulnerability Disclosure](https://apis.io/security/iceye/iceye-vulnerability-disclosure/)
 
-Direct tasking interface to the ICEYE SAR constellation. Create tasks up to 14 days in advance with no feasibility study, retrieve task status, list tasks, cancel tasks, fetch task scenes, and price tasks - built for machine-to-machine automation.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://docs.iceye.com/constellation/api/tasking/](https://docs.iceye.com/constellation/api/tasking/)
-- **Base URL:** `https://api.iceye.com`
+Published plans, tiers and prices.
 
-#### Tags
+- [Iceye Plans Pricing](https://apis.io/plans/iceye/iceye-plans-pricing/)
 
-- Tasking
-- SAR
-- Constellation
-- Automation
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://docs.iceye.com/constellation/api/tasking/)
-- [Postman Collection](collections/iceye.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/iceye.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Iceye Rate Limits](https://apis.io/rate-limits/iceye/iceye-rate-limits/)
 
-### ICEYE Company API
+#### FinOps (1)
 
-Account and company context API providing identity, entitlement, and organizational metadata that frames Catalog and Tasking calls.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://docs.iceye.com/constellation/api/1.0/](https://docs.iceye.com/constellation/api/1.0/)
-- **Base URL:** `https://api.iceye.com`
+- [Iceye Finops](https://apis.io/finops/iceye/iceye-finops/)
 
-#### Tags
+## Where to find this API
 
-- Account
-- Company
-- Identity
-
-#### Properties
-
-- [Documentation](https://docs.iceye.com/constellation/api/1.0/)
-- [Postman Collection](collections/iceye.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/iceye.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### ICEYE Platform
-
-Web platform at platform.iceye.com for browsing catalog imagery, submitting tasking orders, monitoring task status, and downloading delivered SAR products through the same backend as the API Platform.
-
-- **Human URL:** [https://platform.iceye.com/](https://platform.iceye.com/)
-- **Base URL:** `https://platform.iceye.com/`
-
-#### Tags
-
-- Platform
-- Web Console
-- Tasking
-
-#### Properties
-
-- [Documentation](https://platform.iceye.com/docs/tasking)
-- [Postman Collection](collections/iceye.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/iceye.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.iceye.com/)
-- [S A R Data](https://www.iceye.com/sar-data)
-- [S A R Data A P I](https://www.iceye.com/sar-data/api)
-- [Tasking](https://www.iceye.com/sar-data/tasking)
 - [Documentation](https://docs.iceye.com/)
-- [A P I Documentation](https://docs.iceye.com/constellation/api/1.0/)
-- [Platform](https://platform.iceye.com/)
-- [Product Documents](https://www.iceye.com/resources/product-documents)
-- [Flood Insights](https://www.iceye.com/solutions/natural-catastrophe-insights/flood-insights)
-- [Wildfire Insights](https://www.iceye.com/solutions/natural-catastrophe-insights/wildfire-insights)
-- [Hurricane Insights](https://www.iceye.com/solutions/natural-catastrophe-insights/hurricane-insights)
-- [Mission Systems](https://www.iceye.com/government-and-defense/mission-systems)
-- [Newsroom](https://www.iceye.com/newsroom)
-- [LinkedIn](https://www.linkedin.com/company/iceye-ltd/)
-- [X (Twitter)](https://x.com/ICEYEfi)
+- [Blog](https://www.iceye.com/blog/rss.xml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 24.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 67.0 |
+| Contract quality | 42.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 5.3 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/iceye/](https://apis.io/providers/iceye/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ICEYE: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/iceye/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
